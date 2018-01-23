@@ -12,7 +12,6 @@ This lab will step through the key elements in setting up a DevOps pipeline for 
 
 - Preparing for the lab
 - Creating the project
-- Working with Git
 - Continuous Integration
 - Create an Azure web app
 - Continuous Deployment
@@ -32,7 +31,7 @@ For this lab you will require:
 
 If you don't have one, create a [VSTS account](http://www.visualstudio.com).
 
-# Creating the project
+# Lab 1: Creating the project
 
 ## Task 1: Create the VSTS Team Project
 
@@ -99,3 +98,72 @@ You now have a web application, committed to source control in VSTS. The next st
 ><img src="images/L1_21.png" width="624"/>
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
+
+# Lab 2: Continuous Integration
+
+Continuous Integration is a key DevOps practice to build, test and create the software to later deploy.
+
+## Task 1: Set up the Continuous Integration definition
+
+1. Navigate to the VSTS project Code hub, and select Set up build.
+<img src="images/L2_1.png" width="624"/>
+2. There are a range of build templates available, including non-Microsoft technologies but for this example select the ASP.NET template and click Apply.
+<img src="images/L2_2.png" width="624"/>
+3. The template creates a build definition with a number of tasks added. Select the Process task which states that some settings need attention. You will need to select the build agent where you want to run this build. You can choose to run the builds on an-premise agent or use the agents hosted on Azure. We will use the Hosted VS2017 agent as it has the .NET framework and all other components that are required to build the app.
+<img src="images/L2_3.png" width="624"/>
+4. The template should be ready to use, so now test the build by clicking Save & Queue.
+<img src="images/L2_4.png" width="624"/>
+5. The next window allows you to change some inputs into the build, but just click Save & Queue.
+<img src="images/L2_5.png" width="424"/>
+6. You should now see that a build has been queued. Click on the build number to watch the build in progress.
+<img src="images/L2_6.png" width="624"/>
+7. Observe the build progressing. You wouldn't normally watch this but mainly for interest and to see when it's complete.
+<img src="images/L2_7.png" width="624"/>
+8. When the build completes click on the build number to see the build log. The summary tab shows who, when, what as well as unit test results. Notice there is no code coverage, we'll add that shortly.
+<img src="images/L2_8.png" width="624"/>
+9. Click on the artifacts tab and the Explore button to look at the output of the build.
+<img src="images/L2_9.png" width="624"/>
+10. Expand the drop folder and notice that there is a zip file. This is the web application, packaged as a zip file, which is an easy way to deploy to Azure. Click Close.
+<img src="images/L2_10.png" width="424"/>
+
+You now have a working build definition for the web application. The next step is to set it up with a Continuous Integration trigger and test it.
+
+## Task 2: Enable Continuous Integration
+
+1. Edit the build definition - Build & Release | Builds | Edit.
+<img src="images/L2_11.png" width="624"/>
+2. Select Triggers and check Enable continuous integration. Save (but not queue).
+<img src="images/L2_12.png" width="624"/>
+3. Test the Continuous Integration trigger by returning to Visual Studio and making a change. For example open the WebApp/Views/Home/Index.cshtml and make a change such as changing the heading for the home page. Save the changes.
+<img src="images/L2_13.png" width="624"/>
+4. In the Team Explorer, return to the Changes hub to see the files you've changed, and add a comment and select Commit All and Push.
+<img src="images/L2_14.png" width="324"/>
+5. In VSTS, navigate to the Builds (Build & Release | Builds) and you should now see a build in progress. If you want to click on the build number to watch the build. 
+<img src="images/L2_15.png" width="624"/>
+
+You now have a build triggered whenever you make a change to the code and push that change to Git in VSTS - Continuous Integration is in place for the project.
+
+>Optional: Add a Build History widget to the Lab Progress dashboard by:
+>- Searching for and adding the build history widget:
+><img src="images/L2_22.png" width="624"/>
+
+>- Ensuring that it is configured to the build definition created in the preceding steps:
+<img src="images/L2_23.png" width="624"/>
+
+>- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -344,7 +344,7 @@ The ARM template is now added to source control although there is no need for it
 9. Set the Template parameters field (using the ... button) to WebApp (Git) WebApp.ARM/azuredeploy.parameterrs.json and click OK.
 <img src="images/IC_13.png" width="624"/>
 
-10. Set the Overide Template parameters field (using the ... button) to WebAppQAPlan, the webSiteName to the same as the Dev website but with QA appended (e.g. WebApp-GJAD-QA)and click OK.
+10. Set the Override Template parameters field (using the ... button) to WebAppQAPlan, the webSiteName to the same as the Dev website but with QA appended (e.g. WebApp-GJAD-QA)and click OK.
 <img src="images/IC_14.png" width="624"/>
 
 11. Move the Azure Deployment: Create or Update Resource Group task to be before the Deploy Azure App Service task by dragging and dropping the task.

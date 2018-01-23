@@ -111,19 +111,19 @@ Continuous Integration is a key DevOps practice to build, test and create the so
 <img src="images/L2_2.png" width="624"/>
 3. The template creates a build definition with a number of tasks added. Select the Process task which states that some settings need attention. You will need to select the build agent where you want to run this build. You can choose to run the builds on an-premise agent or use the agents hosted on Azure. We will use the Hosted VS2017 agent as it has the .NET framework and all other components that are required to build the app.
 <img src="images/L2_3.png" width="624"/>
-4. The template should be ready to use, so now test the build by clicking Save & Queue.
+4. The template restores any dependencies using NuGet, builds the solution, runs any unit tests and then publishes the output. This should be ready to use, so for now test the build by clicking Save & Queue.
 <img src="images/L2_4.png" width="624"/>
 5. The next window allows you to change some inputs into the build, but just click Save & Queue.
 <img src="images/L2_5.png" width="424"/>
 6. You should now see that a build has been queued. Click on the build number to watch the build in progress.
 <img src="images/L2_6.png" width="624"/>
-7. Observe the build progressing. You wouldn't normally watch this but mainly for interest and to see when it's complete.
+7. Observe the build progressing.
 <img src="images/L2_7.png" width="624"/>
-8. When the build completes click on the build number to see the build log. The summary tab shows who, when, what as well as unit test results. Notice there is no code coverage, we'll add that shortly.
+8. When the build completes click on the build number to see the build log. The summary tab shows who made what changes and when, as well as unit test results.
 <img src="images/L2_8.png" width="624"/>
 9. Click on the artifacts tab and the Explore button to look at the output of the build.
 <img src="images/L2_9.png" width="624"/>
-10. Expand the drop folder and notice that there is a zip file. This is the web application, packaged as a zip file, which is an easy way to deploy to Azure. Click Close.
+10. Expand the drop folder and notice that there is a zip file created from the build task in the build definition. This is the web application, packaged as a zip file, which is an easy way to deploy to Azure. Click Close.
 <img src="images/L2_10.png" width="424"/>
 
 You now have a working build definition for the web application. The next step is to set it up with a Continuous Integration trigger and test it.
@@ -148,7 +148,7 @@ You now have a build triggered whenever you make a change to the code and push t
 ><img src="images/L2_22.png" width="624"/>
 
 >- Ensuring that it is configured to the build definition created in the preceding steps:
-<img src="images/L2_23.png" width="624"/>
+><img src="images/L2_23.png" width="624"/>
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
 

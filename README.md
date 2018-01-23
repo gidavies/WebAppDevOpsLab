@@ -62,11 +62,11 @@ You now have a VSTS team project. The next step is to create a web application.
 <img src="images/L1_9.png" width="524"/>
 7. Ensure that MVC is selected, disable Enable Docker if checked and check Add unit tests. Click OK.
 <img src="images/L1_10.png" width="624"/>
-8. When the project has been created, click the run button (green arrow) to build and launch the web application locally.
+8. When the project has been created, click the run button (green arrow) or F5 to build and launch the web application locally.
 <img src="images/L1_11.png" width="624"/>
 9. The web application will launch locally. Take a quick look and then close the browser. To stop the debug session.
-<img src="images/L1_12.png" width="324"/>
-10. To stop the debug session click the stop button in Visual Studio.
+<img src="images/L1_12.png" width="624"/>
+10. To stop the debug session click the stop button or Shift + F5 in Visual Studio.
 <img src="images/L1_13.png" width="624"/>
 
 You now have a web application. The next step is now to add this to Git so that it is under source control.

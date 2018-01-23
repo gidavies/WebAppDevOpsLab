@@ -117,7 +117,7 @@ Continuous Integration is a key DevOps practice to build, test and create the so
 <img src="images/L2_5.png" width="424"/>
 6. You should now see that a build has been queued. Click on the build number to watch the build in progress.
 <img src="images/L2_6.png" width="624"/>
-7. Observe the build progressing.
+7. Observe the build progressing. It should take around 2-3 minutes.
 <img src="images/L2_7.png" width="624"/>
 8. When the build completes click on the build number to see the build log. The summary tab shows who made what changes and when, as well as unit test results.
 <img src="images/L2_8.png" width="624"/>
@@ -152,6 +152,62 @@ You now have a build triggered whenever you make a change to the code and push t
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
 
+# Lab 3: Create an Azure Web App
+
+[Azure Web Apps](https://docs.microsoft.com/en-gb/azure/app-service/app-service-web-overview) is an Azure service for hosting web applications. In this lab you'll create the Azure Web App into which you will later deploy the web application using Continuous Deployment.
+
+1. In a browser go to the Azure Portal at http://portal.azure.com.
+
+2. Select Create a resource and enter web app into the search field:
+<img src="images/WA-1.png" width="624"/>
+
+3. Press enter and select Web App from the list:
+<img src="images/WA-2.png" width="800"/>
+
+4. Click Create:
+<img src="images/WA-3.png" width="424"/>
+
+5. Complete the highlighted fields as follows:
+<img src="images/WA-4.png" width="800"/>
+
+- App name: Choose a unique name that will be the URL for the web application such as WebApp plus your initials
+
+- Subscription: If you have more than one subscription, ensure that you choose the correct one for this lab
+
+- Resource Group: Create a new resource group for your web app
+
+- OS: Leave this as the default of Windows.
+
+- App Service Plan/Location: Click on this to create a new App Service Plan. Complete these fields:
+    - App Service plan: Enter a name, such as WebAppPlan
+    - Location: Select an Azure region close to you
+    - Pricing tier: Click on this, and select the F1 Free tier
+6. Click OK to save the App Service Plan.
+
+7. Click Create to save and create the Web App.
+
+8. After a short time (approx. 1-2 mins) you should see a notification that the Web App has been successfully created. You may want to pin the web app to your Azure dashboard for easy location later on:
+
+<img src="images/WA-5.png" width="324"/>
+
+9. Confirm that your Web App is created by selecting Go to resource.
+
+10. Click on the URL:
+<img src="images/WA-6.png" width="624"/>
+
+11. Your Web App should open in the browser and you will see something like this:
+<img src="images/WA-7.png" width="624"/>
+ 
+The exact page details will change over time but this now confirms that you have created a Web App in Azure. In the next lab we will deploy the web application into the newly created Azure Web App.
+
+>Optional: Add an Embedded Webpage widget to the Lab Progress dashboard by:
+>- Searching for and adding the Embedded Webpage widget:
+><img src="images/WA-8.png" width="624"/>
+
+>- Add the URL for your web app created in the preceding steps:
+><img src="images/WA-9.png" width="624"/>
+
+>- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
 
 
 

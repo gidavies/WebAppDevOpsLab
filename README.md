@@ -313,14 +313,14 @@ This lab will create a new test environment in Azure without needing to manually
 
 6. In Visual Studio, select the Team Explorer | Changes. Add a commit comment and select Commit All and Push. Save if prompted.
 
-Note this will trigger a build and a release in the background. You could turn off the CI trigger but here just let it run in the background while completing the next task.
+The ARM template is now added to source control although there is no need for it to be in the code repository, this was just for convenience. Note adding to source control will trigger a build and a release in the background. You could temporarily turn off the CI trigger but just let it run in the background while completing the next task.
 
 ## Task 2 - Update the release pipeline to provision the Web App using the ARM template.
 
 1. In VSTS select Build and Release | Releases | your release definition and Edit.
 <img src="images/IC_5.png" width="624"/>
 
-2. Add a new artifact to the release pipeline.
+2. Add a new artifact to the release pipeline. This means the release will get the code from the build and the ARM templates directly from source control.
 <img src="images/IC_6.png" width="624"/>
 
 3. Set the Source type to Git, the Project and Source (repository) to the Web App project, the Default branch to master and the default version to Latest from default branch. Then click Add (you may need to scroll down).
@@ -359,7 +359,7 @@ After a few minutes you should see that both the Dev and QA environments have be
 17. Explore the [Azure portal](http://portal.azure.com) to find the resource group WebApp-QA-RG and the web app provisioned using ARM in the QA environment. Confirm that the App service has been deployed and open it using the URL in the App service overview.
 <img src="images/IC_17.png" width="624"/>
 
-You have now created a DevOps pipeline that deploys to mutliple environments, and provisions the QA environment on demand without a manual process.
+You have now created a DevOps pipeline that deploys to multiple environments, and provisions the QA environment on demand without a manual process.
 
 
 

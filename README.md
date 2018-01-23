@@ -557,7 +557,19 @@ You now have automated UI tests being executed everytime a new version of your a
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner. 
 
+# Lab 7: Monitoring with Application Insights
 
+DevOps doesn't stop at deployment into production. Monitoring and understanding your application provides valuble insight. 
+
+1. Complete the [Monitoring with Application Insights](http://almvm.azurewebsites.net/labs/vsts/monitor/) Lab
+
+# Other labs 
+
+If you'd like to continue exploring DevOps with VSTS then related labs include:
+
+[Node.js and Express continuous deployment with Visual Studio Team Services and Azure App Service](https://almvm.azurewebsites.net/labs/vsts/nodejs/express/)
+
+[DevOps with Visual Studio Team Services for Java](https://almvm.azurewebsites.net/labs/java/)
 
 
 

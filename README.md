@@ -535,7 +535,7 @@ You now have some Selenium tests in the project. Before committing these to sour
 5. Open the Release definition (Build and Release | Releases | Edit) and click on the tasks for the QA environment. Click the + button, select the Test tab and select the Visual Studio Test task. The Selenium tests are within a unit test so this task can execute them.
 <img src="images/S_6.png" width="624"/>
 
-6. Select the test task. In the Test filter criteria field add TestCategory=PhantomJS. This will only execute tests that have the matching [TestCategory] property in the code provides control over which tests to run. 
+6. Select the test task. In the Test filter criteria field add TestCategory=PhantomJS. This will only execute tests that have the matching [TestCategory] property in the code and provides control over which tests to run. 
 <img src="images/S_7.png" width="624"/>
 
 7. Ensure the test task is the last task and save the release.

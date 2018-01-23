@@ -287,6 +287,80 @@ You have now deployed a web application into a live Azure site using a DevOps re
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
 
+# Lab 5: Infrastructure as Code
+
+The ability to treat infrastructure (machines, networks, configuration) in the same way as code brings many benefits, but in particular allows you to create infrastructure on demand and include that in your DevOps pipeline.
+
+Azure Resource Manager (ARM) templates are the native approach and this lab adds using ARM into the flow.
+
+This lab will create a new test environment in Azure without needing to manually create it (via the Portal or the  Command line etc.).
+
+## Task 1 - Create the ARM template for a Web App
+
+1. In Visual Studio, with the Web App solution open in Solution Explorer, right click the solution and select Add | New Project.
+<img src="images/IC_1.png" width="624"/>
+
+2. Select Cloud | Azure Resource Group and name the project e.g. WebApp.ARM.
+<img src="images/IC_2.png" width="624"/>
+
+3. There are a range of ARM templates to create a wide variety or resources in Azure. In this case from the Visual Studio Templates select Blank Template and click OK.
+<img src="images/IC_3.png" width="624"/>
+
+4. You now have a project in your solution containing a blank ARM template (azuredeploy.json) and a blank parameters file (azuredeploy.parameters.json).
+<img src="images/IC_4.png" width="324"/>
+
+5. View (or download) [azuredeploy.json](/ARM/azuredeploy.json) and [azuredeploy.parameters.json](/ARM/azuredeploy.parameters.json) and replace the contents of the same files in the Visual Studio solution with the contents from these. Save the files.
+
+6. In Visual Studio, select the Team Explorer | Changes. Add a commit comment and select Commit All and Push. Save if prompted.
+
+Note this will trigger a build and a release in the background. You could turn off the CI trigger but here just let it run in the background while completing the next task.
+
+## Task 2 - Update the release pipeline to provision the Web App using the ARM template.
+
+1. In VSTS select Build and Release | Releases | your release definition and Edit.
+<img src="images/IC_5.png" width="624"/>
+
+2. Add a new artifact to the release pipeline.
+<img src="images/IC_6.png" width="624"/>
+
+3. Set the Source type to Git, the Project and Source (repository) to the Web App project, the Default branch to master and the default version to Latest from default branch. Then click Add (you may need to scroll down).
+<img src="images/IC_7.png" width="624"/>
+
+4. In the Pipeline view hover over the Dev environment and select Clone.
+<img src="images/IC_8.png" width="624"/>
+
+5. Select the cloned environment Copy of Dev and change the name to QA and close the Environment window.
+<img src="images/IC_9.png" width="624"/>.
+
+6. Select the QA environment and in Tasks click the plus sign and then search for the Azure Resource Group Deployment task. Select Add.
+<img src="images/IC_10.png" width="624"/>
+
+7. Set the Azure Details. Select the Azure subscription set up previously, Ensure that the Action is Create or update resource group, Enter a new resource group name for the QA environment e.g. WeAppQA-RG and set the location.
+<img src="images/IC_11.png" width="624"/>
+
+8. In the Template section set the Template (using the ... button) to Web App (Git) WebApp.ARM/azuredeploy.json and click OK.
+<img src="images/IC_12.png" width="624"/>
+
+9. Set the Template parameters field (using the ... button) to WebApp (Git) WebApp.ARM/azuredeploy.parameterrs.json and click OK.
+<img src="images/IC_13.png" width="624"/>
+
+10. Set the Overide Template parameters field (using the ... button) to WebAppQAPlan, the webSiteName to the same as the Dev website but with QA appended (e.g. WebApp-GJAD-QA)and click OK.
+<img src="images/IC_14.png" width="624"/>
+
+11. Move the Azure Deployment: Create or Update Resource Group task to be before the Deploy Azure App Service task by dragging and dropping the task.
+
+12. In the QA deployment process settings set the App service name to the name you used in step 10 above. Save your changes. 
+<img src="images/IC_15.png" width="624"/>
+
+13. Test the changes by making another code change, committing and pushing, and observe the build and release.
+After a few minutes you should see that both the Dev and QA environments have been successfully deployed to.
+<img src="images/IC_16.png" width="624"/>
+
+17. Explore the [Azure portal](http://portal.azure.com) to find the resource group WebApp-QA-RG and the web app provisioned using ARM in the QA environment. Confirm that the App service has been deployed and open it using the URL in the App service overview.
+<img src="images/IC_17.png" width="624"/>
+
+You have now created a DevOps pipeline that deploys to mutliple environments, and provisions the QA environment on demand without a manual process.
+
 
 
 

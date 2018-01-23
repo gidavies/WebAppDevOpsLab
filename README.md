@@ -335,7 +335,7 @@ The ARM template is now added to source control although there is no need for it
 6. Select the QA environment and in Tasks click the plus sign and then search for the Azure Resource Group Deployment task. Select Add.
 <img src="images/IC_10.png" width="624"/>
 
-7. Set the Azure Details. Select the Azure subscription set up previously, Ensure that the Action is Create or update resource group, Enter a new resource group name for the QA environment e.g. WeAppQA-RG and set the location.
+7. Set the Azure Details. Select the Azure subscription set up previously, Ensure that the Action is Create or update resource group, Enter a new resource group name for the QA environment e.g. WebAppQA-RG and set the location.
 <img src="images/IC_11.png" width="624"/>
 
 8. In the Template section set the Template (using the ... button) to Web App (Git) WebApp.ARM/azuredeploy.json and click OK.

@@ -375,7 +375,7 @@ Integrating automated tests into your DevOps pipeline can help drive quality whi
 
 3. Select Browse, search for Selenium and install Selenium.WebDriver
 <img src="images/S_3.png" width="624"/>
-and then Selenium.PhantomJS.WebDriver (you'll probably need to scroll down the results to find it)
+and then install Selenium.PhantomJS.WebDriver (you'll probably need to scroll down the results to find it)
 <img src="images/S_3_1.png" width="624"/>
 
 4. Close the NuGet page.

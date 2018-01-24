@@ -29,7 +29,7 @@ For this lab you will require:
 
 >VSTS supports any app and doesn't require the use of Visual Studio, .NET or other Microsoft languages. At the bottom of this page there are links to labs that work through implementing DevOps with Node, Java, Eclipse, IntelliJ and Docker.
 
-If you don't have one, create a [VSTS account](http://www.visualstudio.com).
+If you don't have one, create a [VSTS account](http://www.visualstudio.com). [Guidance on creating an account](https://docs.microsoft.com/en-us/vsts/user-guide/sign-up-invite-teammates) 
 
 # Lab 1: Creating the project
 
@@ -530,20 +530,24 @@ You now have some Selenium tests in the project. Before committing these to sour
     - Target Folder: $(build.artifactstagingdirectory)
 <img src="images/S_5.png" width="624"/>
 
-4. Move the Copy Files task to be after the Build solution task and save (but not queue) the build. The tests will now be available in the build output the next time the build runs. The next step is to execute the tests in the release.
+4. Move the Copy Files task to be after the Build solution task and save (but not queue) the build. The tests will now be available in the build output the next time the build runs. 
 
-5. Open the Release definition (Build and Release | Releases | Edit) and click on the tasks for the QA environment. Click the + button, select the Test tab and select the Visual Studio Test task. The Selenium tests are within a unit test so this task can execute them.
+5. In this example we want the CI build to continue to only run unit tests and not the new Selenium tests. Therefore update the Test Assemblies task and add TestCategory=!PhantomJS in the Test filter criteria field. This uses the TestCategories in the test code to filter the tests to be run.
+<img src="images/S_5_1.png" width="624"/>
+The next step is to execute the tests in the release.
+
+6. Open the Release definition (Build and Release | Releases | Edit) and click on the tasks for the QA environment. Click the + button, select the Test tab and select the Visual Studio Test task. The Selenium tests are within a unit test so this task can execute them.
 <img src="images/S_6.png" width="624"/>
 
-6. Select the test task. In the Test filter criteria field add TestCategory=PhantomJS. This will only execute tests that have the matching [TestCategory] property in the code and provides control over which tests to run. 
+7. Select the test task. In the Test filter criteria field add TestCategory=PhantomJS. This will only execute tests that have the matching [TestCategory] property in the code and provides control over which tests to run. 
 <img src="images/S_7.png" width="624"/>
 
-7. Ensure the test task is the last task and save the release.
+8. Ensure the test task is the last task and save the release.
 
-8. Now return to Visual Studio and commit and push the changes. This will trigger the CI build, which will now include the tests in the output, and then trigger the CD release, which will execute the tests found in the build output. Wait for the build and release into QA to complete and then open the release summary. You should see that there are tests in the QA environment and that they have passed.
+9. Now return to Visual Studio and commit and push the changes. This will trigger the CI build, which will now include the tests in the output, and then trigger the CD release, which will execute the tests found in the build output. Wait for the build and release into QA to complete and then open the release summary. You should see that there are tests in the QA environment and that they have passed.
 <img src="images/S_8.png" width="624"/>
 
-9. Click on the 100% pass link for the QA environment and you will see the individual test results. By default the view is filtered to only show failed tests, select All outcomes to see the tests.
+10. Click on the 100% pass link for the QA environment and you will see the individual test results. By default the view is filtered to only show failed tests, select All outcomes to see the tests.
 <img src="images/S_9.png" width="624"/>
 
 You now have automated UI tests being executed everytime a new version of your application is deployed.

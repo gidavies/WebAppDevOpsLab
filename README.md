@@ -532,7 +532,7 @@ You now have some Selenium tests in the project. Before committing these to sour
 
 4. Move the Copy Files task to be after the Build solution task and save (but not queue) the build. The tests will now be available in the build output the next time the build runs. 
 
-5. In this example we want the CI build to continue to only run unit tests and not the new Selenium tests. Therefore update the Test Assemblies task and add TestCategory=!PhantomJS in the Test filter criteria field. This uses the TestCategories in the test code to filter the tests to be run.
+5. In this example we want the CI build to continue to only run unit tests and not the new Selenium tests. Therefore update the Test Assemblies task and add TestCategory!=PhantomJS in the Test filter criteria field. This uses the TestCategories in the test code to filter the tests to be run.
 <img src="images/S_5_1.png" width="624"/>
 The next step is to execute the tests in the release.
 

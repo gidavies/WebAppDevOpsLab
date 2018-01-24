@@ -68,13 +68,13 @@ You now have a VSTS team project. The next step is to create a web application.
 10. To stop the debug session click the stop button or Shift + F5 in Visual Studio.
 <img src="images/L1_13.png" width="624"/>
 
-You now have a web application. The next step is now to add this to Git so that it is under source control.
+You now have a web application. The next step is to add the application to Git so that it is under source control.
 
 ## Task 3: Committing the new Web App to source control
 
 1. In the Visual Studio Team Explorer, select Changes.
 <img src="images/L1_14.png" width="324"/>
-2. Add a commit commment, such as Initial commit, then select Commit All and Push.
+2. Add a commit comment, such as Initial commit, then select Commit All and Push.
 <img src="images/L1_15.png" width="324"/>
 3. When completed you can go back to VSTS in the browser, select Code and you will see your web application. Take a look at the history to see your initial commit.
 <img src="images/L1_16.png" width="624"/>
@@ -109,7 +109,7 @@ Continuous Integration is a key DevOps practice to build, test and create the so
 <img src="images/L2_1.png" width="624"/>
 2. There are a range of build templates available, including non-Microsoft technologies but for this example select the ASP.NET template and click Apply.
 <img src="images/L2_2.png" width="624"/>
-3. The template creates a build definition with a number of tasks added. Select the Process task which states that some settings need attention. You will need to select the build agent where you want to run this build. You can choose to run the builds on an-premise agent or use the agents hosted on Azure. We will use the Hosted VS2017 agent as it has the .NET framework and all other components that are required to build the app.
+3. The template creates a build definition with a number of tasks added. Select the Process task which states that some settings need attention. You will need to select the build agent where you want to run this build. You can choose to run the builds using an on-premise agent or use the agents hosted on Azure. We will use the Hosted VS2017 agent as it has the .NET framework and all other components that are required to build the app.
 <img src="images/L2_3.png" width="624"/>
 4. The template restores any dependencies using NuGet, builds the solution, runs any unit tests and then publishes the output. This should be ready to use, so for now test the build by clicking Save & Queue.
 <img src="images/L2_4.png" width="624"/>
@@ -313,14 +313,14 @@ This lab will create a new test environment in Azure without needing to manually
 
 6. In Visual Studio, select the Team Explorer | Changes. Add a commit comment and select Commit All and Push. Save if prompted.
 
-The ARM template is now added to source control although there is no need for it to be in the code repository, this was just for convenience. Note adding to source control will trigger a build and a release in the background. You could temporarily turn off the CI trigger but just let it run in the background while completing the next task.
+The ARM template is now added to source control, although there is no need for it to be in the same repository as the code, this is just for convenience in this lab. Note that adding the new files to source control will trigger a build and release in the background. You could temporarily turn off the CI trigger but just let it run in the background while completing the next task.
 
 ## Task 2 - Update the release pipeline to provision the Web App using the ARM template.
 
 1. In VSTS select Build and Release | Releases | your release definition and Edit.
 <img src="images/IC_5.png" width="624"/>
 
-2. Add a new artifact to the release pipeline. This means the release will get the code from the build and the ARM templates directly from source control.
+2. Add a new artifact to the release pipeline. This means the release will get the application from the build (as a zip file) and the ARM templates directly from source control (as they don't need to be compiled or packaged).
 <img src="images/IC_6.png" width="624"/>
 
 3. Set the Source type to Git, the Project and Source (repository) to the Web App project, the Default branch to master and the default version to Latest from default branch. Then click Add (you may need to scroll down).
@@ -341,7 +341,7 @@ The ARM template is now added to source control although there is no need for it
 8. In the Template section set the Template (using the ... button) to Web App (Git) WebApp.ARM/azuredeploy.json and click OK.
 <img src="images/IC_12.png" width="624"/>
 
-9. Set the Template parameters field (using the ... button) to WebApp (Git) WebApp.ARM/azuredeploy.parameterrs.json and click OK.
+9. Set the Template parameters field (using the ... button) to WebApp (Git) WebApp.ARM/azuredeploy.parameters.json and click OK.
 <img src="images/IC_13.png" width="624"/>
 
 10. Set the Override Template parameters field (using the ... button) to WebAppQAPlan, the webSiteName to the same as the Dev website but with QA appended (e.g. WebApp-GJAD-QA)and click OK.
@@ -538,7 +538,7 @@ You now have some Selenium tests in the project. Before committing these to sour
 6. The next step is to execute the tests as part of the release. Open the Release definition (Build and Release | Releases | Edit) and click on the tasks for the QA environment. Click the + button, select the Test tab and select the Visual Studio Test task. The Selenium tests are within a unit test so this task can execute them.
 <img src="images/S_6.png" width="624"/>
 
-7. Select the test task. In the Test filter criteria field add TestCategory=PhantomJS. This will only execute tests that have the matching [TestCategory] property in the code and provides control over which tests to run. 
+7. Select the test task. In the Test filter criteria field add TestCategory=PhantomJS. This will only execute tests that have the matching [TestCategory] property in the code and provides control over which tests to run. In this example we have decided not to run the Selenium tests in the CI build but want to run them in the QA environment.
 <img src="images/S_7.png" width="624"/>
 
 8. Ensure the test task is the last task and save the release.
@@ -612,9 +612,20 @@ This is just a tiny sample of what can be done with Application Insights, you ca
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner. 
 
+# Other tasks
+
+This lab outlines the key practices in implementing a DevOps pipeline but there are many other tasks that could be incorporated into the flow including:
+- Setting pre and post approvals on release environments
+- Using variables in releases across environment
+- Adding load testing to the flow
+- Linking changes to user stories and other work items to understand what has been built and released.
+- Using Git branches and merging via Pull Requests
+
 # Other labs 
 
 If you'd like to continue exploring DevOps with VSTS then related labs include:
+
+[A range of VSTS Labs from Agile to Testing](https://almvm.azurewebsites.net/labs/vsts/)
 
 [Node.js and Express continuous deployment with Visual Studio Team Services and Azure App Service](https://almvm.azurewebsites.net/labs/vsts/nodejs/express/)
 

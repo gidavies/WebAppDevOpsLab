@@ -63,7 +63,7 @@ You now have a VSTS team project. The next step is to create a web application.
 <img src="images/L1_10.png" width="624"/>
 8. When the project has been created, click the run button (green arrow) or F5 to build and launch the web application locally.
 <img src="images/L1_11.png" width="624"/>
-9. The web application will launch locally. Take a quick look and then close the browser. To stop the debug session.
+9. The web application will launch locally. Take a quick look and then close the browser.
 <img src="images/L1_12.png" width="624"/>
 10. To stop the debug session click the stop button or Shift + F5 in Visual Studio.
 <img src="images/L1_13.png" width="624"/>
@@ -373,10 +373,10 @@ Integrating automated tests into your DevOps pipeline can help drive quality whi
 2. The Selenium libraries need to be added to the project. Right-click on the test project and select Manage NuGet Packages. 
 <img src="images/S_2.png" width="624"/>
 
-3. Select Browse, search for Selenium and install:
-    - Selenium.WebDriver
-    - Selenium.PhantomJS.WebDriver
+3. Select Browse, search for Selenium and install Selenium.WebDriver
 <img src="images/S_3.png" width="624"/>
+and then Selenium.PhantomJS.WebDriver (you'll probably need to scroll down the results to find it)
+<img src="images/S_3_1.png" width="624"/>
 
 4. Close the NuGet page.
 

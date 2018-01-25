@@ -551,6 +551,8 @@ You now have some Selenium tests in the project. Before committing these to sour
 
 You now have automated UI tests being executed everytime a new version of your application is deployed.
 
+>Optional: You might want to see what happens when a test fails. You could change the heading for the web app again, but not update the tests, and commit the change. You should then see a successful CI build (as the UI Tests aren't run in the build), a successful release to Dev but a failed release to QA (as that's the environment we chose to run the UI Tests in).
+
 >Optional: Add a Deployment status widget showing test results to the Lab Progress dashboard by:
 >- Searching for and adding the Deployment status widget:
 ><img src="images/S_10.png" width="624"/>

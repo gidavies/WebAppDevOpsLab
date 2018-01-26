@@ -23,9 +23,11 @@ This lab will step through the key elements in setting up a DevOps pipeline for 
 
 For this lab you will require:
 
-- A Visual Studio Team Services account (free)
+- A Visual Studio Team Services (VSTS) account (free)
 - An Azure subscription (your own or a free trial)
 - Visual Studio 2017 installed (optional)
+
+Use the same account (login/email and password) for both VSTS and Visual Studio.
 
 >VSTS supports any app and doesn't require the use of Visual Studio, .NET or other Microsoft languages. At the bottom of this page there are links to labs that work through implementing DevOps with Node, Java, Eclipse, IntelliJ and Docker.
 
@@ -53,7 +55,7 @@ You now have a VSTS team project. The next step is to create a web application.
 <img src="images/L1_5.png" width="624"/>
 3. Visual Studio will then prompt to clone the VSTS remote Git repo to your local machine. Change the local path as required and then click Clone.
 <img src="images/L1_6.png" width="624"/>
-4. If you now open the Team Explorer you will see that the repository has been cloned succesfully.
+4. If you now open the Team Explorer (bottom right hand corner) you will see that the repository has been cloned succesfully.
 <img src="images/L1_7.png" width="324"/>
 5. Select New in the Solutions area of Team Explorer.
 <img src="images/L1_8.png" width="324"/>
@@ -117,7 +119,7 @@ Continuous Integration is a key DevOps practice to build, test and create the so
 <img src="images/L2_5.png" width="424"/>
 6. You should now see that a build has been queued. Click on the build number to watch the build in progress.
 <img src="images/L2_6.png" width="624"/>
-7. Observe the build progressing. It should take around 2-3 minutes.
+7. Observe the build progressing. It will typically take a few minutes.
 <img src="images/L2_7.png" width="624"/>
 8. When the build completes click on the build number to see the build log. The summary tab shows who made what changes and when, as well as unit test results.
 <img src="images/L2_8.png" width="624"/>
@@ -168,7 +170,6 @@ You now have a build triggered whenever you make a change to the code and push t
 <img src="images/WA-3.png" width="424"/>
 
 5. Complete the highlighted fields as follows:
-<img src="images/WA-4.png" width="800"/>
 
 - App name: Choose a unique name that will be the URL for the web application such as WebApp plus your initials
 
@@ -182,6 +183,9 @@ You now have a build triggered whenever you make a change to the code and push t
     - App Service plan: Enter a name, such as WebAppPlan
     - Location: Select an Azure region close to you
     - Pricing tier: Click on this, and select the F1 Free tier
+
+<img src="images/WA-4.png" width="800"/>
+
 6. Click OK to save the App Service Plan.
 
 7. Click Create to save and create the Web App.
@@ -267,7 +271,7 @@ You have now created a Release Pipeline, configured to Continuously Deploy whene
 3. In VSTS, navigate to the Builds (Build & Release | Builds) and you should now see a build in progress. Click on the build number to watch the build. 
 <img src="images/L2_15.png" width="624"/>
 
-4. When the build has completed, open the build log summary and on the right hand side scroll down to see the Deployments area. You should see that a release to Dev is in progress and therefore Continuous Deployment has been triggered.
+4. When the build has completed, open the build log summary (Build and Release | Builds | Right-click the build and View build results) and on the right hand side scroll down to see the Deployments area. You should see that a release to Dev is in progress and therefore Continuous Deployment has been triggered.
 <img src="images/CD_14.png" width="624"/>
 
 5. Click on the Dev link in Deployments to see the release logs. Note that the zip file (artifact) is downloaded from the build (not rebuilt) and then deployed to Azure.

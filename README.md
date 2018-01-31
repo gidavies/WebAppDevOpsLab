@@ -313,7 +313,10 @@ This lab will create a new test environment in Azure without needing to manually
 4. You now have a project in your solution containing a blank ARM template (azuredeploy.json) and a blank parameters file (azuredeploy.parameters.json).
 <img src="images/IC_4.png" width="324"/>
 
-5. View (or download) [azuredeploy.json](/ARM/azuredeploy.json) and [azuredeploy.parameters.json](/ARM/azuredeploy.parameters.json) and replace the contents of the same files in the Visual Studio solution with the contents from these. Save the files.
+5. Now replace the content of the files created in the previous step with pre-prepared content:
+- View (or download) [this azuredeploy.json file](/ARM/azuredeploy.json), select all the contents of the file, and then copy and paste over the content of the azuredeploy.json file in Visual Studio.
+- Do the same with this [azuredeploy.parameters.json file](/ARM/azuredeploy.parameters.json). 
+- Save the files in Visual Studio.
 
 6. In Visual Studio, select the Team Explorer | Changes. Add a commit comment and select Commit All and Push. Save if prompted.
 

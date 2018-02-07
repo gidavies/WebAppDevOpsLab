@@ -72,9 +72,9 @@ You now have a VSTS team project. The next step is to create a web application.
     <img src="images/L1_A3.png" width="424"/>
 
     ### Signing in to Visual Studio
-    
+
     If you haven't used Visual Studio on the machine before you will be prompted to sign in when Visual Studio starts. Sign in with the account that you are using for VSTS.
-    <img src="images/L1_A1.png" width="424"/>
+    <img src="images/L1_A1.png" width="324"/>
     
 2. If you now open the Team Explorer (bottom right hand corner) you will see that the repository has been cloned succesfully.
 <img src="images/L1_7.png" width="324"/>

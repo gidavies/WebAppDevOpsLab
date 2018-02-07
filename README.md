@@ -51,19 +51,28 @@ You now have a VSTS team project. The next step is to create a web application.
 
 1. To clone the (empty) Git repository into Visual Studio there are two main options - cloning from within the browser or from within Visual Studio. 
     ### Cloning from within the browser. 
+
     1. Click on the Clone in Visual Studio button.
     <img src="images/L1_4.png" width="624"/>
+
     2. You may be prompted to confirm that you want to open Visual Studio (exact look and feel will depend on the browser you're using). If so, agree to open Visual Studio.
     <img src="images/L1_5.png" width="624"/>
+
     3. Visual Studio will then prompt to clone the VSTS remote Git repo to your local machine. Change the local path as required and then click Clone.
     <img src="images/L1_6.png" width="624"/>
+
     If this doesn't work then follow the Cloning from within Visual Studio steps.
+
     ### Cloning from within Visual Studio
+
     1. Open the Team Explorer view (bottom left hand side next to the Solution Explorer). Then select Manage Connections and Connect to Project.
     <img src="images/L1_A2.png" width="424"/>
+
     2. Select the Web App project (you may only have one project listed) expand it to show the Web App repository and then click Clone.
     <img src="images/L1_A3.png" width="424"/>
+
     ### Signing in to Visual Studio
+    
     If you haven't used Visual Studio on the machine before you will be prompted to sign in when Visual Studio starts. Sign in with the account that you are using for VSTS.
     <img src="images/L1_A1.png" width="424"/>
     

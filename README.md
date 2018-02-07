@@ -49,25 +49,37 @@ You now have a VSTS team project. The next step is to create a web application.
 
 ## Task 2: Creating the Visual Studio Web Application
 
-1. To clone the (empty) Git repository into Visual Studio, click on the Clone in Visual Studio button.
-<img src="images/L1_4.png" width="624"/>
-2. You may be prompted to confirm that you want to open Visual Studio (exact look and feel will depend on the browser you're using). If so, agree to open Visual Studio.
-<img src="images/L1_5.png" width="624"/>
-3. Visual Studio will then prompt to clone the VSTS remote Git repo to your local machine. Change the local path as required and then click Clone.
-<img src="images/L1_6.png" width="624"/>
-4. If you now open the Team Explorer (bottom right hand corner) you will see that the repository has been cloned succesfully.
+1. To clone the (empty) Git repository into Visual Studio there are two main options - cloning from within the browser or from within Visual Studio. 
+    ### Cloning from within the browser. 
+    1. Click on the Clone in Visual Studio button.
+    <img src="images/L1_4.png" width="624"/>
+    2. You may be prompted to confirm that you want to open Visual Studio (exact look and feel will depend on the browser you're using). If so, agree to open Visual Studio.
+    <img src="images/L1_5.png" width="624"/>
+    3. Visual Studio will then prompt to clone the VSTS remote Git repo to your local machine. Change the local path as required and then click Clone.
+    <img src="images/L1_6.png" width="624"/>
+    If this doesn't work then follow the Cloning from within Visual Studio steps.
+    ### Cloning from within Visual Studio
+    1. Open the Team Explorer view (bottom left hand side next to the Solution Explorer). Then select Manage Connections and Connect to Project.
+    <img src="images/L1_A2.png" width="424"/>
+    2. Select the Web App project (you may only have one project listed) expand it to show the Web App repository and then click Clone.
+    <img src="images/L1_A3.png" width="424"/>
+    ### Signing in to Visual Studio
+    If you haven't used Visual Studio on the machine before you will be prompted to sign in when Visual Studio starts. Sign in with the account that you are using for VSTS.
+    <img src="images/L1_A1.png" width="424"/>
+    
+2. If you now open the Team Explorer (bottom right hand corner) you will see that the repository has been cloned succesfully.
 <img src="images/L1_7.png" width="324"/>
-5. Select New in the Solutions area of Team Explorer.
+3. Select New in the Solutions area of Team Explorer.
 <img src="images/L1_8.png" width="324"/>
-6. Select Web | ASP.NET Web Application, change the name as required and click OK.
+4. Select Web | ASP.NET Web Application, change the name as required and click OK.
 <img src="images/L1_9.png" width="524"/>
-7. Ensure that MVC is selected, disable Enable Docker if checked and check Add unit tests. Click OK.
+5. Ensure that MVC is selected, disable Enable Docker if checked and check Add unit tests. Click OK.
 <img src="images/L1_10.png" width="624"/>
-8. When the project has been created, click the run button (green arrow) or F5 to build and launch the web application locally.
+6. When the project has been created, click the run button (green arrow) or F5 to build and launch the web application locally.
 <img src="images/L1_11.png" width="624"/>
-9. The web application will launch locally. Take a quick look and then close the browser.
+7. The web application will launch locally. Take a quick look and then close the browser.
 <img src="images/L1_12.png" width="624"/>
-10. To stop the debug session click the stop button or Shift + F5 in Visual Studio.
+8. To stop the debug session click the stop button or Shift + F5 in Visual Studio.
 <img src="images/L1_13.png" width="624"/>
 
 You now have a web application. The next step is to add the application to Git so that it is under source control.
@@ -76,9 +88,11 @@ You now have a web application. The next step is to add the application to Git s
 
 1. In the Visual Studio Team Explorer, select Changes.
 <img src="images/L1_14.png" width="324"/>
-2. Add a commit comment, such as Initial commit, then select Commit All and Push.
+2. You may be prompted to enter or confirm your Git User Information. Just click Save and you won't be prompted again.
+<img src="images/L1_14a.png" width="424"/>
+3. Add a commit comment, such as Initial commit, then select Commit All and Push.
 <img src="images/L1_15.png" width="324"/>
-3. When completed you can go back to VSTS in the browser, select Code and you will see your web application. Take a look at the history to see your initial commit.
+4. When completed you can go back to VSTS in the browser, select Code and you will see your web application. Take a look at the history to see your initial commit.
 <img src="images/L1_16.png" width="624"/>
 
 You now have a web application, committed to source control in VSTS. The next step is to add Continuous Integration to the VSTS project.
@@ -295,7 +309,7 @@ You have now deployed a web application into a live Azure site using a DevOps re
 
 The ability to treat infrastructure (machines, networks, configuration) in the same way as code brings many benefits, but in particular allows you to create infrastructure on demand and include that in your DevOps pipeline.
 
-Azure Resource Manager (ARM) templates are the native approach and this lab adds using ARM into the flow.
+Azure Resource Manager (ARM) templates are the native approach and this lab adds using ARM into the flow. The example here will allow you to create an environment in Azure on demand as part of the flow.
 
 This lab will create a new test environment in Azure without needing to manually create it (via the Portal or the  Command line etc.).
 
@@ -359,7 +373,7 @@ The ARM template is now added to source control, although there is no need for i
 12. In the QA deployment process settings set the App service name to the name you used in step 10 above. Save your changes. 
 <img src="images/IC_15.png" width="624"/>
 
-13. Test the changes by making another code change, committing and pushing, and observe the build and release.
+13. Test the changes by making another code change (e.g. changing the heading again), committing and pushing, and observe the build and release.
 After a few minutes you should see that both the Dev and QA environments have been successfully deployed to.
 <img src="images/IC_16.png" width="624"/>
 
@@ -370,7 +384,7 @@ You have now created a DevOps pipeline that deploys to multiple environments, an
 
 # Lab 6: Automated Testing with Selenium
 
-Integrating automated tests into your DevOps pipeline can help drive quality whilst deploying more frequently. This lab integrates [Selenium](http://www.seleniumhq.org/), a popular testing framework, into your pipeline.
+Integrating automated tests into your DevOps pipeline can help drive quality whilst deploying more frequently. This lab integrates [Selenium](http://www.seleniumhq.org/), a popular testing framework, into your pipeline. Selenium allows you to automate the testing of your web application using all the main browsers, reducing the manual testing required.
 
 ## Task 1: Create the Selenium tests
 
@@ -510,11 +524,11 @@ namespace WebApp.UITest
 }
 ```
 6. This code contains six tests that will be executed against the web application using the Selenium PhantomJS driver. The tests check that pages and content on those pages exist. Note:
-    - You need to add your QA web app url into line 22:
+    - You need to add your QA web app url into line 22 (the one you can find as per the last step in Lab 5 above):
     ```c
     _webAppBaseURL = "https://<yourwebapp>.azurewebsites.net/";
     ```
-    - The final test (IndexTitleTest) checks the heading on the home page that you have been changing in the previous labs. Make sure that the expected value is correct for your web app.
+    - The final test (IndexTitleTest) checks the heading on the home page that you have been changing in the previous labs. Make sure that the expected value is correct for your web app (line 110).
     ```c
     string expectedTitle = "Another New Title";
     ```
@@ -535,25 +549,28 @@ You now have some Selenium tests in the project. Before committing these to sour
     - Source Folder: $(build.sourcesdirectory)
     - Contents: \*\*\bin\\$(BuildConfiguration)\\*\*
     - Target Folder: $(build.artifactstagingdirectory)
+    - The Display name will update as you make changes.
 <img src="images/S_5.png" width="624"/>
 
-4. Move the Copy Files task to be after the Build solution task and save (but not queue) the build. The tests will now be available in the build output the next time the build runs. 
+4. Move the Copy Files task to be after the Build solution task. The tests will now be available in the build output the next time the build runs. 
 
 5. In this example we want the CI build to continue to only run unit tests and not the new Selenium tests. Therefore update the Test Assemblies task and add TestCategory!=PhantomJS in the Test filter criteria field. This uses the TestCategories in the test code to filter the tests to be run.
 <img src="images/S_5_1.png" width="624"/>
 
-6. The next step is to execute the tests as part of the release. Open the Release definition (Build and Release | Releases | Edit) and click on the tasks for the QA environment. Click the + button, select the Test tab and select the Visual Studio Test task. The Selenium tests are within a unit test so this task can execute them.
+6. Save (but not queue) the build.
+
+7. The next step is to execute the tests as part of the release. Open the Release definition (Build and Release | Releases | Edit) and click on the tasks for the QA environment. Click the + button, select the Test tab and select the Visual Studio Test task. The Selenium tests are within a unit test so this task can execute them.
 <img src="images/S_6.png" width="624"/>
 
-7. Select the test task. In the Test filter criteria field add TestCategory=PhantomJS. This will only execute tests that have the matching [TestCategory] property in the code and provides control over which tests to run. In this example we have decided not to run the Selenium tests in the CI build but want to run them in the QA environment.
+8. Select the test task. In the Test filter criteria field add TestCategory=PhantomJS. This will only execute tests that have the matching [TestCategory] property in the code and provides control over which tests to run. In this example we have decided not to run the Selenium tests in the CI build but want to run them in the QA environment.
 <img src="images/S_7.png" width="624"/>
 
-8. Ensure the test task is the last task and save the release.
+9. Ensure the test task is the last task and save the release.
 
-9. Now return to Visual Studio and commit and push the changes. This will trigger the CI build, which will now include the tests in the output, and then trigger the CD release, which will execute the tests found in the build output. Wait for the build and release into QA to complete and then open the release summary. You should see that there are tests in the QA environment and that they have passed.
+10. Now return to Visual Studio and the Team Explorer. You may need to click the back arrow or home button in Team Explorer. Then commit and push the changes. This will trigger the CI build, which will now include the tests in the output, and then trigger the CD release, which will execute the tests found in the build output. Wait for the build and release into QA to complete and then open the release summary. You should see that there are tests in the QA environment and that they have passed.
 <img src="images/S_8.png" width="624"/>
 
-10. Click on the 100% pass link for the QA environment and you will see the individual test results. By default the view is filtered to only show failed tests, select All outcomes to see the tests.
+11. Click on the 100% pass link for the QA environment and you will see the individual test results. By default the view is filtered to only show failed tests, select All outcomes to see the tests.
 <img src="images/S_9.png" width="624"/>
 
 You now have automated UI tests being executed everytime a new version of your application is deployed.

@@ -134,21 +134,23 @@ Continuous Integration is a key DevOps practice to build, test and create the so
 <img src="images/L2_1.png" width="624"/>
 2. There are a range of build templates available, including non-Microsoft technologies but for this example select the ASP.NET template and click Apply.
 <img src="images/L2_2.png" width="624"/>
-3. The template creates a build definition with a number of tasks added. Select the Process task which states that some settings need attention. You will need to select the build agent where you want to run this build. You can choose to run the builds using an on-premise agent or use the agents hosted on Azure. We will use the Hosted VS2017 agent as it has the .NET framework and all other components that are required to build the app.
+3. The template creates a build definition with a number of tasks added. Select the Process task which states that some settings need attention. You need to select the build agent where you want to run this build. You can choose to run the builds using an on-premise agent or use the agents hosted on Azure. We will use the Hosted VS2017 agent as it has the .NET framework and all other components that are required to build the app. Check that the agent is set to Hosted 2017.
 <img src="images/L2_3.png" width="624"/>
-4. The template restores any dependencies using NuGet, builds the solution, runs any unit tests and then publishes the output. This should be ready to use, so for now test the build by clicking Save & Queue.
+4. The Get sources task will be showing red to indicate that something needs completing. Click on the Get sources task, and set the source to VSTS Git. This is telling the build that it will get the source code to build from Git hosted in VSTS. Note that there are many other options.
+<img src="images/L2_31.png" width="624"/> 
+5. The template restores any dependencies using NuGet, builds the solution, runs any unit tests and then publishes the output. This should be ready to use, so for now test the build by clicking Save & Queue.
 <img src="images/L2_4.png" width="624"/>
-5. The next window allows you to change some inputs into the build, but just click Save & Queue.
+6. The next window allows you to change some inputs into the build, but just click Save & Queue.
 <img src="images/L2_5.png" width="424"/>
-6. You should now see that a build has been queued. Click on the build number to watch the build in progress.
+7. You should now see that a build has been queued. Click on the build number to watch the build in progress.
 <img src="images/L2_6.png" width="624"/>
-7. Observe the build progressing. It will typically take a few minutes.
+8. Observe the build progressing. It will typically take a few minutes.
 <img src="images/L2_7.png" width="624"/>
-8. When the build completes click on the build number to see the build log. The summary tab shows who made what changes and when, as well as unit test results.
+9. When the build completes click on the build number to see the build log. The summary tab shows who made what changes and when, as well as unit test results.
 <img src="images/L2_8.png" width="624"/>
-9. Click on the artifacts tab and the Explore button to look at the output of the build.
+10. Click on the artifacts tab and the Explore button to look at the output of the build.
 <img src="images/L2_9.png" width="624"/>
-10. Expand the drop folder and notice that there is a zip file created from the build task in the build definition. This is the web application, packaged as a zip file, which is an easy way to deploy to Azure. Click Close.
+11. Expand the drop folder and notice that there is a zip file created from the build task in the build definition. This is the web application, packaged as a zip file, which is an easy way to deploy to Azure. Click Close.
 <img src="images/L2_10.png" width="424"/>
 
 You now have a working build definition for the web application. The next step is to set it up with a Continuous Integration trigger and test it.
@@ -294,7 +296,7 @@ You have now created a Release Pipeline, configured to Continuously Deploy whene
 3. In VSTS, navigate to the Builds (Build & Release | Builds) and you should now see a build in progress. Click on the build number to watch the build. 
 <img src="images/L2_15.png" width="624"/>
 
-4. When the build has completed, open the build log summary (Build and Release | Builds | Right-click the build and View build results) and on the right hand side scroll down to see the Deployments area. You should see that a release to Dev is in progress and therefore Continuous Deployment has been triggered.
+4. When the build has completed, open the build log summary (Build and Release | Builds | click the ... by the build and View build results) and on the right hand side scroll down to see the Deployments area. You should see that a release to Dev is in progress and therefore Continuous Deployment has been triggered.
 <img src="images/CD_14.png" width="624"/>
 
 5. Click on the Dev link in Deployments to see the release logs. Note that the zip file (artifact) is downloaded from the build (not rebuilt) and then deployed to Azure.

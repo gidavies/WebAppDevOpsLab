@@ -40,7 +40,7 @@ If you don't have one, create a [VSTS account](http://www.visualstudio.com). [Gu
 1. Open a browser and navigate to your VSTS account https://*youraccountname*.visualstudio.com.
 2. In your VSTS account select New Project.
 <img src="images/L1_1.png" width="624"/>
-3. Give the project a name, e.g. Web App. Make sure that version control is set to Git and click Create. There is no reason not to choose to use TFVC but this lab has documented the steps for using Git.
+3. Give the project a name, e.g. Web App. Make sure that version control is set to Git and click Create. You could equally choose to use TFVC but this lab has documented the steps for using Git.
 <img src="images/L1_2.png" width="624"/>
 4. Your VSTS team project has been created. You can add other people to the team if you want.
 <img src="images/L1_3.png" width="624"/>

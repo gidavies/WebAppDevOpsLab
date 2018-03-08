@@ -40,7 +40,7 @@ If you don't have one, create a [VSTS account](http://www.visualstudio.com). [Gu
 1. Open a browser and navigate to your VSTS account https://*youraccountname*.visualstudio.com.
 2. In your VSTS account select New Project.
 <img src="images/L1_1.png" width="624"/>
-3. Give the project a name, e.g. Web App. Make sure that version control is set to Git and click Create. 
+3. Give the project a name, e.g. Web App. Make sure that version control is set to Git and click Create. There is no reason not to choose to use TFVC but this lab has documented the steps for using Git.
 <img src="images/L1_2.png" width="624"/>
 4. Your VSTS team project has been created. You can add other people to the team if you want.
 <img src="images/L1_3.png" width="624"/>
@@ -136,7 +136,7 @@ Continuous Integration is a key DevOps practice to build, test and create the so
 <img src="images/L2_2.png" width="624"/>
 3. The template creates a build definition with a number of tasks added. Select the Process task which states that some settings need attention. You need to select the build agent where you want to run this build. You can choose to run the builds using an on-premise agent or use the agents hosted on Azure. We will use the Hosted VS2017 agent as it has the .NET framework and all other components that are required to build the app. Check that the agent is set to Hosted 2017.
 <img src="images/L2_3.png" width="624"/>
-4. The Get sources task will be showing red to indicate that something needs completing. Click on the Get sources task, and set the source to VSTS Git. This is telling the build that it will get the source code to build from Git hosted in VSTS. Note that there are many other options.
+4. The Get sources task will be showing red to indicate that something needs completing. Click on the Get sources task, and set the source to VSTS Git. This is telling the build that it will get the source code to build from Git hosted in VSTS, although there are many other options. Keep the default settings for VSTS Git. 
 <img src="images/L2_31.png" width="624"/> 
 5. The template restores any dependencies using NuGet, builds the solution, runs any unit tests and then publishes the output. This should be ready to use, so for now test the build by clicking Save & Queue.
 <img src="images/L2_4.png" width="624"/>

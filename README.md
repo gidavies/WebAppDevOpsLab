@@ -34,7 +34,7 @@ Use the same account (login/email and password) for both VSTS and Visual Studio.
 As a student you can create an Azure Student account by completing the forms at these links:
 
 [Register for Imagine](https://imagine.microsoft.com/en-us/Catalog/Product/99)
-[Sign up for Azure for students](http://www.visualstudio.com)
+[Sign up for Azure for students](https://azure.microsoft.com/en-gb/free/students/) 
 
 If you don't have one, create a [VSTS account](http://www.visualstudio.com). [Guidance on creating an account](https://docs.microsoft.com/en-us/vsts/user-guide/sign-up-invite-teammates) 
 

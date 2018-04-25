@@ -31,10 +31,10 @@ Use the same account (login/email and password) for both VSTS and Visual Studio.
 
 >VSTS supports any app and doesn't require the use of Visual Studio, .NET or other Microsoft languages. At the bottom of this page there are links to labs that work through implementing DevOps with Node, Java, Eclipse, IntelliJ and Docker.
 
-As a student you can create an Azure Student account by completing the forms at these links:
+>If you are a student you can create an Azure Student account by completing the forms at these links:
 
-- [Register for Imagine](https://imagine.microsoft.com/en-us/Catalog/Product/99)
-- [Sign up for Azure for students](https://azure.microsoft.com/en-gb/free/students/) 
+>- [Register for Imagine](https://imagine.microsoft.com/en-us/Catalog/Product/99)
+>- [Sign up for Azure for students](https://azure.microsoft.com/en-gb/free/students/) 
 
 If you don't have one, create a [VSTS account](http://www.visualstudio.com). [Guidance on creating an account](https://docs.microsoft.com/en-us/vsts/user-guide/sign-up-invite-teammates) 
 

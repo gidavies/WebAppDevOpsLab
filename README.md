@@ -162,7 +162,7 @@ You now have a working build definition for the web application. The next step i
 
 ## Task 2: Enable Continuous Integration
 
-1. Edit the build definition - Build & Release | Builds | Edit.
+1. Hover your mouse over the build definition and you will see three dots. Click on the dots and select Edit.
 <img src="images/L2_11.png" width="624"/>
 2. Select Triggers and check Enable continuous integration. Save (but not queue).
 <img src="images/L2_12.png" width="624"/>
@@ -369,7 +369,7 @@ The ARM template is now added to source control, although there is no need for i
 5. Select the cloned environment Copy of Dev and change the name to QA and close the Environment window.
 <img src="images/IC_9.png" width="624"/>.
 
-6. Select the QA environment and in Tasks click the plus sign and then search for the Azure Resource Group Deployment task. Select Add.
+6. Select the QA environment (by clicking on the "1 phase, 1 task" link inside the QA environment) and in Tasks click the plus sign and then search for the Azure Resource Group Deployment task. Select Add.
 <img src="images/IC_10.png" width="624"/>
 
 7. Set the Azure Details. Select the Azure subscription set up previously, Ensure that the Action is Create or update resource group, Enter a new resource group name for the QA environment e.g. WebAppQA-RG and set the location.

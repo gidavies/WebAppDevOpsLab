@@ -63,13 +63,13 @@ The ARM template is now added to source control, although there is no need for i
 11. In the QA deployment process settings set the App service name to the name you used in step 9 above. Save your changes. 
 <img src="images/IC_15.png" width="624"/>
 
-13. Test the changes by making another code change in Visual Studio(e.g. changing the heading again), committing and pushing, and observe the build and release.
-After a few minutes you should see that both the Dev and QA environments have been successfully deployed to.
-<img src="images/IC_16.png" width="624"/>
+12. Test the changes by making another code change in Visual Studio(e.g. changing the heading again), committing and pushing, and observe the build and release.
+After a few minutes you should see that both the Dev and QA stages have been successfully deployed to.
+<img src="images/Lab5_T2_S12.png" width="624"/>
 
-17. Explore the [Azure portal](http://portal.azure.com) to find the resource group WebApp-QA-RG and the web app provisioned using ARM in the QA environment. Confirm that the App service has been deployed and open it using the URL in the App service overview.
+13. Explore the [Azure portal](http://portal.azure.com) to find the resource group WebApp-QA-RG and the web app provisioned using ARM in the QA environment. Confirm that the web application has been deployed and open it using the URL in the App service overview.
 <img src="images/IC_17.png" width="624"/>
 
-You have now created a DevOps pipeline that deploys to multiple stages, and provisions the QA stage on demand without a manual process.
+You have now created a DevOps pipeline that deploys to multiple stages, and provisions the QA stage on demand without a manual process. You could now delete the QA web app in the Azure portal and run the release pipeline again and it will recreate the QA web app.
 
 [<- Lab 4: Continuous Deployment](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab4.md) | [Home](https://github.com/gidavies/WebAppDevOpsLab/blob/master/README.md) | [Lab 6: Automated Testing with Selenium ->](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab6.md)

@@ -1,8 +1,10 @@
 # Web App DevOps Lab
 
-This lab will step through the key elements in setting up a DevOps pipeline for Azure using the DevOps tools for Azure - Visual Studio Team Services (VSTS).
+This lab will step through the key elements in setting up a DevOps pipeline using Azure DevOps, previously known as Visual Studio Team Services (VSTS). What was VSTS has now been separated into a suite of tooling including Azure Repos and Azure Pipelines which will be primarily used in this lab.
 
 >Background information
+
+>[Understanding the change from VSTS to Azure DevOps](https://azure.microsoft.com/en-us/blog/introducing-azure-devops/)
 
 >[What is DevOps?](https://www.visualstudio.com/learn/what-is-devops/)
 
@@ -19,31 +21,56 @@ This lab will step through the key elements in setting up a DevOps pipeline for 
 - Automated Testing with Selenium
 - Monitoring with Application Insights
 
+Azure DevOps supports any app and doesn't require the use of Visual Studio, .NET or other Microsoft languages or platforms. [Labs that work through implementing DevOps with Node, Java, Eclipse, IntelliJ, Docker and more are available here](https://www.azuredevopslabs.com/).
+
+# Other tasks
+
+This lab outlines the key practices in implementing a DevOps pipeline but there are many other tasks that could be incorporated into the flow including:
+- Setting pre and post approvals on release environments
+- Using variables in releases across environment
+- Adding load testing to the flow
+- Linking changes to user stories and other work items to understand what has been built and released.
+- Using Git branches and merging via Pull Requests
+
 # Preparing for the lab
 
 For this lab you will require:
 
-- A Visual Studio Team Services (VSTS) account (free)
+- An Azure DevOps organisation (formerly known as a Azure DevOps organisation)
 - An Azure subscription (your own or a free trial)
-- Visual Studio 2017 installed (optional)
+- Visual Studio 2017 (any edition) installed (optional)
 
-Use the same account (login/email and password) for both VSTS and Visual Studio.
-
->VSTS supports any app and doesn't require the use of Visual Studio, .NET or other Microsoft languages. At the bottom of this page there are links to labs that work through implementing DevOps with Node, Java, Eclipse, IntelliJ and Docker.
+Use the same account (login/email and password) for both Azure DevOps and Visual Studio.
 
 >If you are a student you can create an Azure Student account by completing the forms at these links:
 
 >- [Register for Imagine](https://imagine.microsoft.com/en-us/Catalog/Product/99)
 >- [Sign up for Azure for students](https://azure.microsoft.com/en-gb/free/students/) 
 
-If you don't have one, create a [VSTS account](http://www.visualstudio.com). [Guidance on creating an account](https://docs.microsoft.com/en-us/vsts/user-guide/sign-up-invite-teammates) 
+If you don't have one, create an [Azure DevOps organisation](http://dev.azure.com). [Guidance for creating an organisation](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=vsts).
+
+# Using the New Navigation UI
+
+In order to have a single flow this lab assumes that you will use the New Navigation UI that is in preview in Azure DevOps. If you create a new organisation it will be on by default, if you have an existing one then to match the steps below you will need to enable this preview feature (and you can disable it after the lab to return to the old UI if preferred).
+
+To enable the New Navigation follow these steps:
+
+1. In Azure DevOps, in the top right hand corner click on your profile picture (or initials if no photo), and then select Preview features.
+<img src="images/Intro1.png" width="350"/>
+
+2. Turn on the toggle for the New Navigation and click on the X close button to close the preview features
+<img src="images/Intro2.png" width="350"/>
+
+The UI should then reload and you will be using the New Navigation. To turn off the New Navigation repeat the above and untoggle the feature.
+
+[Next: Lab 1](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab1.md)
 
 # Lab 1: Creating the project
 
-## Task 1: Create the VSTS Team Project
+## Task 1: Create the Azure DevOps Team Project
 
-1. Open a browser and navigate to your VSTS account https://*youraccountname*.visualstudio.com.
-2. In your VSTS account select New Project.
+1. Open a browser and navigate to your Azure DevOps organisation - either https://*youraccountname*.visualstudio.com or https://dev.azure.com/*youraccountname* (the new URL and default for new organisations).
+2. In your Azure DevOps organisation select New Project.
 <img src="images/L1_1.png" width="624"/>
 3. Give the project a name, e.g. Web App. Make sure that version control is set to Git and click Create. You could equally choose to use TFVC but this lab has documented the steps for using Git.
 <img src="images/L1_2.png" width="624"/>
@@ -654,24 +681,7 @@ This is just a tiny sample of what can be done with Application Insights, you ca
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner. 
 
-# Other tasks
 
-This lab outlines the key practices in implementing a DevOps pipeline but there are many other tasks that could be incorporated into the flow including:
-- Setting pre and post approvals on release environments
-- Using variables in releases across environment
-- Adding load testing to the flow
-- Linking changes to user stories and other work items to understand what has been built and released.
-- Using Git branches and merging via Pull Requests
-
-# Other labs 
-
-If you'd like to continue exploring DevOps with VSTS then related labs include:
-
-[A range of VSTS Labs from Agile to Testing](https://almvm.azurewebsites.net/labs/vsts/)
-
-[Node.js and Express continuous deployment with Visual Studio Team Services and Azure App Service](https://almvm.azurewebsites.net/labs/vsts/nodejs/express/)
-
-[DevOps with Visual Studio Team Services for Java](https://almvm.azurewebsites.net/labs/java/)
 
 
 

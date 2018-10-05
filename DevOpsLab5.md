@@ -22,7 +22,7 @@ This lab will create a new test environment in Azure without needing to manually
 
 5. Now replace the content of the files created in the previous step with pre-prepared content:
 - View (or download) [this azuredeploy.json file](https://raw.githubusercontent.com/gidavies/WebAppDevOpsLab/master/ARM/azuredeploy.json), select all the contents of the file, and then copy and paste over the content of the azuredeploy.json file in Visual Studio.
-- Do the same with this [azuredeploy.parameters.json file](https://raw.githubusercontent.com/gidavies/WebAppDevOpsLab/master/ARM/azuredeploy.parameters.json"). 
+- Do the same with this [azuredeploy.parameters.json file](https://raw.githubusercontent.com/gidavies/WebAppDevOpsLab/master/ARM/azuredeploy.parameters.json). 
 - Save the files in Visual Studio.
 
 6. In Visual Studio, select the Team Explorer | Changes. Add a commit comment and select Commit All and Push. Save if prompted.

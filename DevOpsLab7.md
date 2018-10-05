@@ -52,4 +52,4 @@ This is just a tiny sample of what can be done with Application Insights, you ca
 
 This completes the DevOps labs.
 
-[Lab 6: Automated Testing with Selenium](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab6.md)
+[<- Lab 6: Automated Testing with Selenium](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab6.md) | [Intro](https://github.com/gidavies/WebAppDevOpsLab/blob/master/README.md)

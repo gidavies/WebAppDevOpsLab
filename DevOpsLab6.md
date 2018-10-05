@@ -202,4 +202,4 @@ You now have automated UI tests being executed everytime a new version of your a
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
 
-[Lab 5: Infrastructure as Code](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab5.md) | [Lab 7: Monitoring with Application Insights](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab7.md)
+[<- Lab 5: Infrastructure as Code](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab5.md) | [Intro](https://github.com/gidavies/WebAppDevOpsLab/blob/master/README.md) | [Lab 7: Monitoring with Application Insights ->](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab7.md)

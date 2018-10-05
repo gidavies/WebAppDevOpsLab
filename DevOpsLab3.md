@@ -57,4 +57,4 @@ The exact page details will change over time but this now confirms that you have
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
 
-[Lab 2: Continuous Integration](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab2.md) | [Lab 4: Continuous Deployment](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab4.md)
+[<- Lab 2: Continuous Integration](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab2.md) | [Intro](https://github.com/gidavies/WebAppDevOpsLab/blob/master/README.md) | [Lab 4: Continuous Deployment ->](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab4.md)

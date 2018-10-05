@@ -76,4 +76,4 @@ You have now deployed a web application into a live Azure site using a DevOps re
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
 
-[Lab 3: Create an Azure Web App](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab3.md) | [Lab 5: Infrastructure as Code](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab5.md)
+[<- Lab 3: Create an Azure Web App](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab3.md) | [Intro](https://github.com/gidavies/WebAppDevOpsLab/blob/master/README.md) | [Lab 5: Infrastructure as Code ->](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab5.md)

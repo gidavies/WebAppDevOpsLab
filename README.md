@@ -12,14 +12,13 @@ This lab will step through the key elements in setting up a DevOps pipeline usin
 
 # Overall flow
 
-- Preparing for the lab
-- Creating the project
-- Continuous Integration
-- Create an Azure Web App
-- Continuous Deployment
-- Infrastructure as Code
-- Automated Testing with Selenium
-- Monitoring with Application Insights
+- [Lab 1: Creating the project](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab1.md)
+- [Lab 2: Continuous Integration](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab2.md)
+- [Lab 3: Create an Azure Web App](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab3.md)
+- [Lab 4: Continuous Deployment](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab4.md)
+- [Lab 5: Infrastructure as Code](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab5.md)
+- [Lab 6: Automated Testing with Selenium](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab6.md)
+- [Lab 7: Monitoring with Application Insights](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab7.md)
 
 Azure DevOps supports any app and doesn't require the use of Visual Studio, .NET or other Microsoft languages or platforms. [Labs that work through implementing DevOps with Node, Java, Eclipse, IntelliJ, Docker and more are available here](https://www.azuredevopslabs.com/).
 
@@ -47,11 +46,11 @@ Use the same account (login/email and password) for both Azure DevOps and Visual
 >- [Register for Imagine](https://imagine.microsoft.com/en-us/Catalog/Product/99)
 >- [Sign up for Azure for students](https://azure.microsoft.com/en-gb/free/students/) 
 
-If you don't have one, create an [Azure DevOps organisation](http://dev.azure.com). [Guidance for creating an organisation](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=vsts).
+If you don't have one, create a free [Azure DevOps organisation](http://dev.azure.com). [Guidance for creating an organisation](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=vsts).
 
 # Using the New Navigation UI
 
-In order to have a single flow this lab assumes that you will use the New Navigation UI that is in preview in Azure DevOps. If you create a new organisation it will be on by default, if you have an existing one then to match the steps below you will need to enable this preview feature (and you can disable it after the lab to return to the old UI if preferred).
+In order to have a single flow this lab assumes that you will use the New Navigation UI that is in preview in Azure DevOps. If you create a new organisation it will be on by default, if you have an existing one then to match the labs you will need to enable this preview feature (and you can disable it after the lab to return to the old UI if preferred).
 
 To enable the New Navigation follow these steps:
 
@@ -63,7 +62,7 @@ To enable the New Navigation follow these steps:
 
 The UI should then reload and you will be using the New Navigation. To turn off the New Navigation repeat the above and untoggle the feature.
 
-[Next: Lab 1](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab1.md)
+[Lab 1: Creating the project](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab1.md)
 
 # Lab 1: Creating the project
 

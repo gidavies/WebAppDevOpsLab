@@ -21,7 +21,7 @@
 
 - Resource Group: Create a new resource group for your web app
 
-- OS: Leave this as the default of Windows.
+- OS: Set this to Windows (as we will deploy a .NET web app later).
 
 - App Service Plan/Location: Click on this to create a new App Service Plan. Complete these fields:
     - App Service plan: Enter a name, such as WebAppPlan
@@ -48,7 +48,7 @@
  
 This confirms that you have created a Web App in Azure. In the next lab we will deploy the web application into the newly created Azure Web App.
 
->Optional: Add an Embedded Webpage widget to the Azure DevOps Overview dashboard:
+>Optional challenge: Add an Embedded Webpage widget to the Azure DevOps Overview dashboard:
 >- Add the Embedded Webpage widget
 >- Add the URL for your web app created in the preceding steps:
 

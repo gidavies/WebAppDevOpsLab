@@ -56,6 +56,6 @@ You now have a web application. The next step is to add the application to Git s
 4. When completed you can go back to Azure DevOps in the browser, select Repos | Files and you will see your source code. Take a look at the history to see your initial commit.
 <img src="images/Lab1_T4_S4.png" width="624"/>
 
-You now have a web application, committed to source control in Azure DevOps. The next step is to add Continuous Integration to the project.
+You now have a web application, committed to source control in Azure DevOps. The next step is to add an automated build that is triggered every time code is pushed to the repo - Continuous Integration.
 
 [<- Home](https://github.com/gidavies/WebAppDevOpsLab/blob/master/README.md) | [Lab 2: Continuous Integration ->](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab2.md)

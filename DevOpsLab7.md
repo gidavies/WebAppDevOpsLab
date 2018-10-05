@@ -49,3 +49,7 @@ This is just a tiny sample of what can be done with Application Insights, you ca
 ><img src="images/AI_15.png" width="624"/>
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
+
+This completes the DevOps labs.
+
+[Lab 6: Automated Testing with Selenium](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab6.md)

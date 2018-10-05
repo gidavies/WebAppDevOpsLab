@@ -52,3 +52,5 @@ You now have a build triggered whenever you make a change to the code and push t
 ><img src="images/L2_23.png" width="624"/>
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
+
+[Lab 1: Creating the project](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab1.md) | [Lab 3: Create an Azure Web App](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab3.md)

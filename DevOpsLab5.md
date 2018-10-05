@@ -74,3 +74,5 @@ After a few minutes you should see that both the Dev and QA environments have be
 <img src="images/IC_17.png" width="624"/>
 
 You have now created a DevOps pipeline that deploys to multiple environments, and provisions the QA environment on demand without a manual process.
+
+[Lab 4: Continuous Deployment](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab4.md) | [Lab 6: Automated Testing with Selenium](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab6.md)

@@ -24,29 +24,24 @@ Azure DevOps supports any app and doesn't require the use of Visual Studio, .NET
 
 # Other tasks
 
-This lab outlines the key practices in implementing a DevOps pipeline but there are many other tasks that could be incorporated into the flow including:
+This lab outlines the key practices in implementing a DevOps pipeline but there are many other tasks that could be added, and you may wish to look into as additional steps after the lab:
 - Setting pre and post approvals on release environments
 - Using variables in releases across environment
 - Adding load testing to the flow
-- Linking changes to user stories and other work items to understand what has been built and released.
-- Using Git branches and merging via Pull Requests
+- Linking changes to user stories and other work items in Azure Boards to understand what has been built and released.
+- Using Git branches and merging via Pull Requests in Azure Repos
 
 # Preparing for the lab
 
 For this lab you will require:
 
-- An Azure DevOps organisation (formerly known as a Azure DevOps organisation)
+- An Azure DevOps organisation (formerly known as a VSTS account)
 - An Azure subscription (your own or a free trial)
 - Visual Studio 2017 (any edition) installed (optional)
 
 Use the same account (login/email and password) for both Azure DevOps and Visual Studio.
 
->If you are a student you can create an Azure Student account by completing the forms at these links:
-
->- [Register for Imagine](https://imagine.microsoft.com/en-us/Catalog/Product/99)
->- [Sign up for Azure for students](https://azure.microsoft.com/en-gb/free/students/) 
-
-If you don't have one, create a free [Azure DevOps organisation](http://dev.azure.com). [Guidance for creating an organisation](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=vsts).
+If you don't have one create a free [Azure DevOps organisation](http://dev.azure.com). [Guidance for creating an organisation](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=vsts).
 
 # Using the New Navigation UI
 
@@ -63,6 +58,11 @@ To enable the New Navigation follow these steps:
 The UI should then reload and you will be using the New Navigation. To turn off the New Navigation repeat the above and untoggle the feature.
 
 [Lab 1: Creating the project](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab1.md)
+
+
+----
+
+The VSTS content below will be removed once the labs are updated to reflect the new Azure DevOps and New Navigation UI.
 
 # Lab 1: Creating the project
 

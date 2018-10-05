@@ -59,6 +59,8 @@ The UI should then reload and you will be using the New Navigation. To turn off 
 
 [Lab 1: Creating the project ->](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab1.md)
 
+Labs updated for Azure DevOps:
+
 
 ----
 

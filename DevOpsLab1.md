@@ -89,4 +89,4 @@ You now have a web application, committed to source control in VSTS. The next st
 
 >- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
 
-[<- Intro](https://github.com/gidavies/WebAppDevOpsLab/blob/master/README.md) |[Lab 2: Continuous Integration ->](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab2.md)
+[<- Home](https://github.com/gidavies/WebAppDevOpsLab/blob/master/README.md) | [Lab 2: Continuous Integration ->](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab2.md)

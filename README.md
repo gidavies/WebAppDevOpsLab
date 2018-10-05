@@ -57,7 +57,7 @@ To enable the New Navigation follow these steps:
 
 The UI should then reload and you will be using the New Navigation. To turn off the New Navigation repeat the above and untoggle the feature.
 
-[Lab 1: Creating the project](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab1.md)
+[Lab 1: Creating the project ->](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab1.md)
 
 
 ----

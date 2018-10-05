@@ -46,15 +46,10 @@
 11. Your Web App should open in the browser and you will see something like this:
 <img src="images/WA-7.png" width="624"/>
  
-The exact page details will change over time but this now confirms that you have created a Web App in Azure. In the next lab we will deploy the web application into the newly created Azure Web App.
+This confirms that you have created a Web App in Azure. In the next lab we will deploy the web application into the newly created Azure Web App.
 
->Optional: Add an Embedded Webpage widget to the Lab Progress dashboard by:
->- Searching for and adding the Embedded Webpage widget:
-><img src="images/WA-8.png" width="624"/>
-
+>Optional: Add an Embedded Webpage widget to the Azure DevOps Overview dashboard:
+>- Add the Embedded Webpage widget
 >- Add the URL for your web app created in the preceding steps:
-><img src="images/WA-9.png" width="624"/>
-
->- Save the changes, close the widget gallery and save the dashboard by clicking on the blue edit button in the bottom right hand corner.
 
 [<- Lab 2: Continuous Integration](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab2.md) | [Home](https://github.com/gidavies/WebAppDevOpsLab/blob/master/README.md) | [Lab 4: Continuous Deployment ->](https://github.com/gidavies/WebAppDevOpsLab/blob/master/DevOpsLab4.md)

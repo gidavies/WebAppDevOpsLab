@@ -10,10 +10,10 @@ Continuous Deployment is another key practice within DevOps to enable the contin
 2. Select a template for the release pipeline. If you scroll through the list you'll see that there are many templates. As we are going to deploy a web application into an Azure App Service, select the Azure App Service Deployment template and click Apply.
 <img src="images/CD_2.png" width="624"/>
 
-3. A release pipeline may have many stages such as Dev, QA, UAT, pre-prod, prod. For now we will have one, and the first stage to deploy to is typically a shared development environment, so call it Dev or similar. Tnen click the close button.
+3. A release pipeline may have many stages such as Dev, QA, UAT, pre-prod, prod. For now we will have one, and the first stage to deploy to is typically a shared development environment, so call it Dev or similar. Then click the close button.
 <img src="images/Lab4_T1_S3.png" width="624"/>
 
-4. Notice that there is already an Artifact to deploy. This has been setup for us after clicking Release in the build log. Click on the Artifact to see the details.
+4. Notice that there is already an Artifact to deploy. This has been configured automatically as the release was created from the build. Click on the Artifact to see the details.
 <img src="images/CD_4.png" width="624"/>
 
 5. This shows that the Artifact is the latest version of the output of the CI build that was created earlier. That output includes the zip file, which is the web application to be deployed. Close the window.

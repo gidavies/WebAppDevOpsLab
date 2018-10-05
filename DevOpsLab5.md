@@ -21,7 +21,7 @@ This lab will create a new test environment in Azure without needing to manually
 <img src="images/IC_4.png" width="324"/>
 
 5. Now replace the content of the files created in the previous step with pre-prepared content:
-- View (or download) [this azuredeploy.json file](/ARM/azuredeploy.json), select all the contents of the file, and then copy and paste over the content of the azuredeploy.json file in Visual Studio.
+- View (or download) [this azuredeploy.json file](/ARM/azuredeploy.json" target="_blank), select all the contents of the file, and then copy and paste over the content of the azuredeploy.json file in Visual Studio.
 - Do the same with this [azuredeploy.parameters.json file](/ARM/azuredeploy.parameters.json). 
 - Save the files in Visual Studio.
 

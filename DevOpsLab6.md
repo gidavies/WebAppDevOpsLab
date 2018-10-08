@@ -130,9 +130,10 @@ namespace WebApp.UITest
 }
 ```
 6. This code contains six tests that will be executed against the web application using the Selenium PhantomJS driver. The tests check that pages and content on those pages exist. Note:
+    - Change the namespace if you used a different name.
     - You need to add your QA web app url into line 24 (the one you can find as per the last step in Lab 5 above):
     ```c
-    _webAppBaseURL = "https://<yourwebapp>.azurewebsites.net/";
+    _webAppBaseURL = "https://<your qa web site>.azurewebsites.net/";
     ```
     - The final test (IndexTitleTest) checks the heading on the home page that you have been changing in the previous labs. Make sure that the expected value is correct for your web app (line 100).
     ```c

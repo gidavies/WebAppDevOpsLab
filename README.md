@@ -35,9 +35,9 @@ This lab outlines the key practices in implementing a DevOps pipeline but there 
 
 For this lab you will require:
 
-- An Azure DevOps organisation (formerly known as a VSTS account)
-- An Azure subscription (your own or a free trial)
-- Visual Studio 2017 (any edition) installed (optional)
+- An Azure DevOps organisation (formerly known as a VSTS account).
+- An Azure subscription (your own or a free trial).
+- Visual Studio 2017 (any edition) installed.
 
 Use the same account (login/email and password) for both Azure DevOps and Visual Studio.
 
